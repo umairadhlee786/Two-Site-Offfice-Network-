@@ -1,38 +1,43 @@
 # Two-Site-Offfice-Network
 A Cisco Packet tracer simulation of a two-site office network 
 
-This project demonstrates the design and implementation of a secure and scalable enterprise network connecting a Branch office and Headquarters (HQ) using Cisco networking technologies.
+This project implements a secure and scalable network connecting a Branch and Headquarters (HQ) environment using Cisco Packet Tracer.
 
 Overview
-The network supports VLAN segmentation, inter-VLAN routing, dynamic routing with OSPFv2, Internet connectivity via static routing, DHCP (server and relay), NAT (static and PAT), wireless LAN (WLAN), and access control through ACLs.
-The design uses VLSM-based IP addressing across 192.168.0.0/24 (Branch) and 172.10.0.0/24 (HQ) to efficiently allocate address space.
 
-Key Features
-VLANs and Inter-VLAN Routing
-VLAN 10 (students), VLAN 20 (staff), and VLAN 99 (management) are configured. Inter-VLAN routing is implemented using a router-on-a-stick approach.
+The network is designed to support segmented LANs, dynamic routing, secure Internet access, and centralized services. It uses VLSM-based addressing across separate Branch and HQ networks.
 
-Routing
-OSPFv2 is configured across all routers in Area 0 with proper router ID assignment and default route propagation. Static routing is used at the network edge to enable Internet access.
 
-NAT
-Static NAT is configured to allow external access to an internal host. Dynamic PAT (overload) is implemented to enable multiple internal users to share a public IP for Internet access.
+Core Components
 
-DHCP
-A centralized DHCP server is configured at HQ, with DHCP relay enabled on branch networks to ensure automatic IP address assignment across VLANs.
+  VLANs with inter-VLAN routing (router-on-a-stick)
 
-WLAN
-A wireless network is configured with SSID “LANE” using WPA2-AES security. Wireless clients receive IP addresses dynamically and have full network and Internet connectivity.
+OSPFv2 (Area 0) for dynamic routing across all routers
 
-Security (ACLs)
-Access Control Lists are used to restrict unauthorized remote access and control traffic flow between internal networks.
+Static routing for Internet connectivity
 
-Validation and Testing
-Full end-to-end connectivity was successfully verified across all VLANs, LANs, and WLAN clients. Internet access was confirmed, external access to the internal server via static NAT was validated, OSPF routing was stable, and all ACL policies were enforced as required.
+NAT (Static and PAT) for internal-to-external communication
 
-Troubleshooting
-During implementation, several issues were identified and resolved, including OSPF neighbor state problems, NAT misconfigurations, missing DHCP relay settings, VLAN mismatches, and wireless connectivity issues.
+Centralized DHCP with relay for multi-network support
+
+Secure WLAN with WPA2 encryption
+
+ACLs for traffic filtering and access control
+
+
+Key Outcomes
+
+Full end-to-end connectivity across Branch, HQ, and WLAN
+
+Internet access for all internal networks
+
+External access to internal server via static NAT
+
+Stable routing and enforced security policies
+
+
 Repository Contents
-The repository includes the Cisco Packet Tracer (.pkt) file containing the complete network configuration and a high level topology diagram. 
 
-Learning Outcomes
-This project demonstrates practical skills in enterprise network design, routing and switching, network security, and troubleshooting. It reflects the ability to build and validate a fully functional, secure, and scalable network solution.
+Cisco Packet Tracer (.pkt) file with full network configuration
+
+Project report (PDF) with detailed design and implementation
