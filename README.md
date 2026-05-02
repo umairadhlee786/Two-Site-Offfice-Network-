@@ -1,7 +1,9 @@
 # Two-Site-Offfice-Network
 A Cisco Packet tracer simulation of a two-site office network 
 
-This project implements a secure and scalable network connecting a Branch and Headquarters (HQ) environment using Cisco Packet Tracer.
+This project implements a secure and scalable network connecting a Branch and Headquarters (HQ) environment using Cisco Packet Tracer. Attached in the repository is the project implementation document and the downloadable packet tracer file.
+
+
 
 Overview
 
